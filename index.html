@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ndwamato | Customer's Discount Eligibility</title>
+    <!-- CSS link-->
+    <link rel="stylesheet" href="styles.css">
+<body>
+    <!-- Form-->
+    <div class="container">
+        <div class="box">
+            <h3>Check to see if you are eligible for a discount.</h3>
+            <div class="age">
+                <input type="number" placeholder="Enter Your Age" id="age" min="1" max="150">
+            </div>
+            <div class="do">
+                <h6>Do you have a membership?</h6>
+            </div>
+            <div class="member">
+                <input type="checkbox" id="member" value="Member" onchange="setBoxes();">
+                <label for="member"> Yes</label><br>
+            </div>
+            <div class="nomember">
+                <input type="checkbox" id="nomember" value="Not A Member" onchange="setBoxes();">
+                <label for="nomember"> No</label><br>
+            </div>
+            <div class="button">
+                <button id="send" onclick="checkEligibility();">Check Eligibility</button>
+            </div>
+            <div class="message">
+                <div class="field" id="field">Field(s) can't be empty</div>
+                <div class="membership" id="membership">You qualify for a membership discount!</div>
+                <div class="senior" id="senior">You qualify for a senior discount!</div>
+                <div class="minor" id="minor">You do not qualify for a discount!</div>
+                <div class="nonmember" id="nonmember">You do not qualify for a discount!</div>
+                <div class="validage" id="validage">Please, Input Valid Age!</div>
+                <div class="error" id="error">ERROR!, Something went wrong</div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
